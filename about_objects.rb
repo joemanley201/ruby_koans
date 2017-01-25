@@ -38,6 +38,9 @@ class AboutObjects < Neo::Koan
 
     # THINK ABOUT IT:
     # What pattern do the object IDs for small integers follow?
+    # 
+    # Matz's Ruby Interpreter or Ruby MRI (also called CRuby) is the reference implementation of the Ruby programming language named after Ruby creator Yukihiro Matsumoto ("Matz").
+    # The pattern is (value * 2) + 1. (value * 2) + 1 is never a valid address for an object on the heap, so there's no overlap with pointers to object data.
   end
 
   def test_clone_creates_a_different_object
