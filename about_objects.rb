@@ -21,7 +21,7 @@ class AboutObjects < Neo::Koan
 
   def test_every_object_has_an_id
     obj = Object.new
-    assert_equal Integer, obj.object_id.class
+    assert_equal Fixnum, obj.object_id.class
   end
 
   def test_every_object_has_different_id
@@ -38,7 +38,7 @@ class AboutObjects < Neo::Koan
 
     # THINK ABOUT IT:
     # What pattern do the object IDs for small integers follow?
-    # 
+    #
     # Matz's Ruby Interpreter or Ruby MRI (also called CRuby) is the reference implementation of the Ruby programming language named after Ruby creator Yukihiro Matsumoto ("Matz").
     # The pattern is (value * 2) + 1. (value * 2) + 1 is never a valid address for an object on the heap, so there's no overlap with pointers to object data.
   end
